@@ -3,7 +3,7 @@ package com.example.java_coding_test_practice.DynamicProgramming;
 import java.io.*;
 import java.util.*;
 
-public class 신나는_함수실행 {
+public class 신나는_함수실행 { //신나는 함수 실행
 
     /*
      * 함수 w에서 a, b, c 중 20이 넘어가게 되면 w(20, 20, 20)을 호출하고,
