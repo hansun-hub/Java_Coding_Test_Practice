@@ -1,9 +1,6 @@
-package com.example.java_coding_test_practice;
+package com.example.java_coding_test_practice.exhaustiveSearch;
 
-import org.junit.Assert;
-import org.junit.jupiter.api.Test;
-
-public class 완전탐색_카펫 {
+public class 카펫 {
     public int[] solution(int brown, int yellow){
         int[] answer = new int[2];
         int sum=brown + yellow;
