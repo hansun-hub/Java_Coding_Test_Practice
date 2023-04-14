@@ -13,7 +13,7 @@ class Solution {
                 temp[j] = array[j+(commands[i][0]-1)]; //
             }
             Arrays.sort(temp);
-            answer[i] = temp[commands[i][2]-1];
+            answer[i] = temp[commands[i][2]-1]; //선택하는 수도 1을 빼야함
 
         }
         return answer;
