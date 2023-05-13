@@ -1,4 +1,4 @@
-package com.example.java_coding_test_practice.DynamicProgramming;
+package com.example.java_coding_test_practice.DivideAndConquer;
 
 
 import java.io.*;
