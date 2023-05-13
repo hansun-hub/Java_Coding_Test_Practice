@@ -3,42 +3,52 @@ package com.example.java_coding_test_practice.DynamicProgramming;
 
 import java.io.*;
 
-public class 칸토어집합_4779 {
-    static int N;
+import java.io.*;
+
+//Main따로 있고
+public class 칸토어집합_4779{
+    //Main에 들어갑니다.
+    //char입니다.
     static char c[];
-    public static void main(String[] args) throws IOException {
+    static int N;
+
+    //main따로 있고
+    public static void main(String args[])throws IOException{
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
         String str;
-        while((str = br.readLine()) != null){ //입력이 없을 때 까지 ㄱㄱ
-            N = Integer.parseInt(str); //N
-
-            int cnt = (int) Math.pow(3,N); //3의 N 제곱 구하기
-            c = new char[cnt]; //char 배열 생성
-
-            for(int i=0;i<cnt;i++) c[i] = '-'; //char배열에 - 로 채워주기
+        //null이 아닌 동안에
+        while((str=br.readLine())!=null){
+            N=Integer.parseInt(str);
+            int cnt = (int)Math.pow(3,N); //27
+            //char 크기 지정해줍니다.
+            c=new char[cnt];
+            for(int i=0;i<cnt;i++) c[i]='-';
 
             dfs(0,cnt);
-
             for(int i=0;i<cnt;i++) bw.write(c[i]);
+            //" "쓰십시오
             bw.write("\n");
-            //버퍼에 남아있는 데이터 강제출력
             bw.flush();
         }
     }
 
-    static void dfs(int start,int length){
-        if(length < 3) {
+    //반환형 적어줘야함, 접근 가능하게 static 붙여줘야함 length임
+    static void dfs(int start, int length){
+        //재귀 탈출 if문 넣어줘야지
+        if(length<3){
             return;
         }
 
-        //중간꺼 공백으로 바꾸고
-        for(int i=start+length/3;i<start+length/3*2;i++) c[i] = ' ';
+        //가운데에 빈칸 넣어주기
+        for(int i=start+length/3;i<start+length/3*2;i++) c[i]=' ';
 
-
-        //첫번째거 확인
-        dfs(start,length/3);
-        //세번째꺼
-        dfs(start+length/3*2,length/3);
+        //첫번째, 세번째 확인하기
+        //전체 길이는 3분의 1이 된다 둘다
+        dfs(start, length/3);
+        dfs(start+length/3*2, length/3);
     }
+
 }
