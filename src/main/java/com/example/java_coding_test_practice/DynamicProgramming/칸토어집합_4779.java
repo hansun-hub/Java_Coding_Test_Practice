@@ -22,6 +22,7 @@ public class 칸토어집합_4779 {
 
             for(int i=0;i<cnt;i++) bw.write(c[i]);
             bw.write("\n");
+            //버퍼에 남아있는 데이터 강제출력
             bw.flush();
         }
     }
@@ -35,9 +36,9 @@ public class 칸토어집합_4779 {
         for(int i=start+length/3;i<start+length/3*2;i++) c[i] = ' ';
 
 
-        //첫번째거 세번째꺼 확인
+        //첫번째거 확인
         dfs(start,length/3);
-
+        //세번째꺼
         dfs(start+length/3*2,length/3);
     }
 }
