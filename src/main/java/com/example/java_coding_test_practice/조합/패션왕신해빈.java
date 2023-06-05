@@ -1,4 +1,4 @@
-package com.example.java_coding_test_practice;
+package com.example.java_coding_test_practice.조합;
 
 import java.io.*;
 import java.util.*;
